@@ -11,7 +11,7 @@
     "executionType":"CLI",
     "templatePath":"wrapper.sh",
     "testPath":"test/test.sh",
-    "longDescription":"This workflow carries out differential expression analysis using the Tuxedo suite of tools. In this workflow: TopHat v2.0.9,  Cufflinks package (including Cuffmerge and Cuffdiff) v2.2.1 and CummeRbund 2.4.1-1.\nInput files required: \n1) Paired end sequencing RNA-seq reads for each condition/replicate\n2) A reference genome in Fasta format OR select reference genome hosted on iPlant  from drop down menu\n3) A genome annotation file in GFF3 or GTF2 format (http://cole-trapnell-lab.github.io/cufflinks/file_formats/) OR select annotation hosted on iPlant from drop down menu\n4) OPTIONAL- GTF masking file (containing transcripts to be ignored)\nGeneral settings: \nThe tool settings in the app below can be changed but are set as the default values (as dictated by each program in the workflow). If you are using the Tuxedo suite of tools for the first time we recommend using the default values in the first instance. \nProgram manuals:\nTophat https://ccb.jhu.edu/software/tophat/manual.shtml\n Cufflinks-Cuffdiff http://cole-trapnell-lab.github.io/cufflinks/manual/\nCummeRbund http://compbio.mit.edu/cummeRbund/manual_2_0.html\n",
+    "longDescription":"This workflow carries out differential expression analysis using the Tuxedo suite of tools. In this workflow: TopHat v2.0.9,  Cufflinks package (including Cuffmerge and Cuffdiff) v2.2.1 and CummeRbund 2.4.1-1.\nInput files required: \n1) Paired end sequencing RNA-seq reads for each condition/replicate\n2) A reference genome in Fasta format OR select reference genome hosted on iPlant from drop down menu\n3) A genome annotation file in GFF3 or GTF2 format (http://cole-trapnell-lab.github.io/cufflinks/file_formats/) OR select annotation hosted on iPlant from drop down menu\n4) OPTIONAL- GTF masking file (containing transcripts to be ignored)\nGeneral settings: \nThe tool settings in the app below can be changed but are set as the default values (as dictated by each program in the workflow). If you are using the Tuxedo suite of tools for the first time we recommend using the default values in the first instance. \nProgram manuals:\nTophat https://ccb.jhu.edu/software/tophat/manual.shtml\n Cufflinks-Cuffdiff http://cole-trapnell-lab.github.io/cufflinks/manual/\nCummeRbund http://compbio.mit.edu/cummeRbund/manual_2_0.html\n",
     "inputs": [
        {
            "id" : "input1",
@@ -53,7 +53,7 @@
            "id" : "input4",
            "details": {
                "argument":"-input4 ",
-               "description":"Enter the left reads (R2) for all condition 2 replicates in the   same sample order as for R1",
+               "description":"Enter the left reads (R2) for all condition 2 replicates in the same sample order as for R1",
                "label":"Condition 2- Right Read File(s)"
            },
            "value": {
@@ -65,7 +65,7 @@
            "id" : "input5",
            "details": {
                "argument":"-input5 ",
-               "description":"Enter the left reads (R1) for all condition 3 replicates in the   same sample order as for R1",
+               "description":"Enter the left reads (R1) for all condition 3 replicates in the same sample order as for R1",
                "label":"Condition 3- Left Read File(s)"
            },
            "value": {
@@ -77,7 +77,7 @@
            "id" : "input6",
            "details": {
                "argument":"-input6 ",
-               "description":"Enter the right reads (R2) for all condition 3 replicates in the   same sample order as for R1",
+               "description":"Enter the right reads (R2) for all condition 3 replicates in the same sample order as for R1",
                "label":"Condition 3- Right Read File(s)"
            },
            "value": {
@@ -89,7 +89,7 @@
            "id" : "input7",
            "details": {
                "argument":"-input7 ",
-               "description":"Enter the left reads (R1) for all condition 4 replicates in the   same sample order as for R1",
+               "description":"Enter the left reads (R1) for all condition 4 replicates in the same sample order as for R1",
                "label":"Condition 4- Left Read File(s)"
            },
            "value": {
@@ -101,7 +101,7 @@
            "id" : "input8",
            "details": {
                "argument":"-input8 ",
-               "description":"Enter the right reads (R2) for all condition 4 replicates in the   same sample order as for R1",
+               "description":"Enter the right reads (R2) for all condition 4 replicates in the same sample order as for R1",
                "label":"Condition 4- Right Read File(s)"
            },
            "value": {
@@ -164,7 +164,7 @@
             "details": {
               "description": "Enter an identifier for this condition - **Use _ instead of spaces** e.g. 2_hours",
               "argument":"-lab1 ",
-              "label":""
+              "label":"Condition 1 label (for R plots, use underscore instead of spaces between words)"
             },
             "value":{
               "default":"condition_1",
@@ -649,7 +649,6 @@
               "label":"Use rescue method"
             },
             "value":{
-              "default":"false",
               "required":false,
               "type":"flag",
               "visible":"true"
@@ -691,11 +690,11 @@
               "label":"Select normalization hits"
             },
             "value":{
-              "default":0.05,
+              "default":{"":"Count hits compatible with reference RNAs only for normalization"},
               "required":false,
               "type":"enumeration",
               "enumValues": [{
-                              "":"Count hits compatible with reference RNAs only for normaliz  ation"
+                              "":"Count hits compatible with reference RNAs only for normalization"
                             },
                             {
                               "-I":"Count all hits for normalization"
