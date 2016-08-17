@@ -13,6 +13,8 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty multiverse" >> /etc/apt/s
 	chmod +x /usr/local/bin/rna_seq_4_conditions_docker.py && \
     	chmod +x /usr/local/bin/cummerbund_plot_scripts.r
 
+WORKDIR /data/
+
 ENTRYPOINT ["python3", "/usr/local/bin/rna_seq_4_conditions_docker.py"]
 
 
