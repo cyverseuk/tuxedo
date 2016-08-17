@@ -277,7 +277,7 @@ os.system(cuffdiff_final)
 #-------------------------------------------- CummeRbund ------------------------------------------------------
 
 if not os.path.exists("./r_plots"): os.mkdir("./r_plots")
-plot_script = "Rscript /cummerbund_plot_scripts.r"
+plot_script = "Rscript /usr/local/bin/cummerbund_plot_scripts.r"
 
 os.system(plot_script)
 
