@@ -337,7 +337,7 @@
             }
         },
         {
-            "id" : "minintron",
+            "id" : "minintron_tophat",
             "details": {
               "description": "The minimum intron length. TopHat will ignore donor/acceptor pairs closer than this many bases apart (-i)",
               "argument":"-k ",
@@ -351,7 +351,7 @@
             }
         },
         {
-            "id" : "maxintron",
+            "id" : "maxintron_tophat",
             "details": {
               "description": "The maximum intron length. When searching for junctions ab initio, TopHat will ignore donor/acceptor pairs farther than this many bases apart, except when such a pair is supported by a split segment alignment of a long read (-I)",
               "argument":"-l ",
@@ -502,7 +502,7 @@
             }
         },
         {
-            "id" : "maxintron",
+            "id" : "maxintron_cufflinks",
             "details": {
               "description": "Maximum intron length",
               "argument":"-u ",
@@ -516,7 +516,7 @@
             }
         },
         {
-            "id" : "minintron",
+            "id" : "minintron_cufflinks",
             "details": {
               "description": "Minimum intron length",
               "argument":"-z ",
