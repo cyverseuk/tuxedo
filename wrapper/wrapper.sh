@@ -1,4 +1,4 @@
-ARGS="${refgen} ${indpre} ${refann} ${input1} ${input2} ${input3} ${input3} ${input4} ${input5} ${input6} ${input7} ${input8} ${maskfile_links} ${maskfile_diff} ${insertsize} ${stdev} ${discalign} ${mixalign} ${libtype} ${sensitivity} ${fastqscale} ${minanchor} ${minintron_tophat} ${maxintron_tophat} ${maxalign} ${minreadlength} ${usegtf} ${userescue} ${lab1} ${lab2} ${lab3} ${lab4} ${maxit} ${idpre} ${isofrac} ${intraintrtresh} ${maxintron_cufflinks} ${minintron_cufflinks} ${junctionalpha} ${anchfrac} ${mintransfrag} ${termexonmax} ${trimcovavg} ${trimfrac} ${transfraggap} ${transfraggap} ${userescuecd} ${testalign} ${testfdr} ${normalhits} -proc 12"
+ARGS="${refgen} ${indpre} ${refann} ${input1} ${input2} ${input3} ${input3} ${input4} ${input5} ${input6} ${input7} ${input8} ${maskfile_links} ${maskfile_diff} ${insertsize} ${stdev} ${discalign} ${mixalign} ${libtype} ${sensitivity} ${fastqscale} ${minanchor} ${minintron_tophat} ${maxintron_tophat} ${maxalign} ${minreadlength} ${usegtf} ${userescue} ${lab1} ${lab2} ${lab3} ${lab4} ${maxit} ${idpre} ${isofrac} ${intraintrtresh} ${maxintron_cufflinks} ${minintron_cufflinks} ${junctionalpha} ${anchfrac} ${mintransfrag} ${termexonmax} ${trimcovavg} ${trimfrac} ${transfraggap} ${transfraggap_diff} ${userescuecd} ${testalign} ${testfdr} ${normalhits} -proc 12"
 
 function in_for {
 	res=(${1})
@@ -16,7 +16,7 @@ for el in "${elenco[@]}"
 INPUTS=${total}
 
 echo  universe                = docker >> lib/condorSubmitEdit.htc
-echo docker_image            =  cyverseuk/tuxedo >> lib/condorSubmitEdit.htc ######
+echo docker_image            =  cyverseuk/tuxedo:v2.1.0 >> lib/condorSubmitEdit.htc ######
 echo arguments				= ${ARGS} >> lib/condorSubmitEdit.htc
 echo transfer_input_files = ${INPUTS} >> lib/condorSubmitEdit.htc
 cat lib/condorSubmit.htc >> lib/condorSubmitEdit.htc
@@ -33,4 +33,3 @@ jobid=`echo $jobid | sed -e 's/\.//'`
 condor_tail -f $jobid
 
 exit 0
-
