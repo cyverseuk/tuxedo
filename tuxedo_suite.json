@@ -24,12 +24,16 @@
            "details": {
                "argument":"-input1 ",
                "description":"Enter the left reads (R1) for all condition 1 replicates",
-               "label":"Condition 1- Left Read File(s)"
+               "label":"Condition 1- Left Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -37,12 +41,16 @@
            "details": {
                "argument":"-input2 ",
                "description":"Enter the Right reads (R2) for all condition 1 replicates",
-               "label":"Condition 1- Right Read File(s)"
+               "label":"Condition 1- Right Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -50,12 +58,16 @@
            "details": {
                "argument":"-input3 ",
                "description":"Enter the left reads (R1) for all condition 2 replicates",
-               "label":"Condition 2- Left Read File(s)"
+               "label":"Condition 2- Left Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -63,12 +75,16 @@
            "details": {
                "argument":"-input4 ",
                "description":"Enter the left reads (R2) for all condition 2 replicates in the same sample order as for R1",
-               "label":"Condition 2- Right Read File(s)"
+               "label":"Condition 2- Right Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -76,12 +92,16 @@
            "details": {
                "argument":"-input5 ",
                "description":"Enter the left reads (R1) for all condition 3 replicates in the same sample order as for R1",
-               "label":"Condition 3- Left Read File(s)"
+               "label":"Condition 3- Left Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -89,12 +109,16 @@
            "details": {
                "argument":"-input6 ",
                "description":"Enter the right reads (R2) for all condition 3 replicates in the same sample order as for R1",
-               "label":"Condition 3- Right Read File(s)"
+               "label":"Condition 3- Right Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -102,12 +126,16 @@
            "details": {
                "argument":"-input7 ",
                "description":"Enter the left reads (R1) for all condition 4 replicates in the same sample order as for R1",
-               "label":"Condition 4- Left Read File(s)"
+               "label":"Condition 4- Left Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -115,12 +143,16 @@
            "details": {
                "argument":"-input8 ",
                "description":"Enter the right reads (R2) for all condition 4 replicates in the same sample order as for R1",
-               "label":"Condition 4- Right Read File(s)"
+               "label":"Condition 4- Right Read File(s)",
+               "showArgument": true
            },
            "value": {
                "required":true,
                "visible":true,
                "default": ""
+           },
+           "semantics": {
+             "maxCardinality": -1
            }
        },
        {
@@ -128,7 +160,8 @@
            "details": {
                "argument":"-indx ",
                "description":"Reference genome for aligning reads",
-               "label":"Reference genome (FASTA)"
+               "label":"Reference genome (FASTA)",
+               "showArgument": true
            },
            "value": {
                "required":false,
@@ -140,7 +173,8 @@
            "details": {
                "argument":"-gtf ",
                "description":"Reference annotation for aligning reads in GTF or GFF3 format",
-               "label":"Reference annotation (GFF3/GTF)"
+               "label":"Reference annotation (GFF3/GTF)",
+               "showArgument": true
            },
            "value": {
                "required":false,
@@ -152,7 +186,8 @@
            "details": {
                "argument":"-o ",
                "description":"Cufflinks - Masking file containing transcripts to be ignored (GTF)",
-               "label":"Masking file"
+               "label":"Masking file",
+               "showArgument": true
            },
            "value": {
                "required":false,
@@ -164,7 +199,8 @@
            "details": {
                "argument":"-E ",
                "description":"Cuffdiff - Masking file containing transcripts to be ignored (GTF)",
-               "label":"Masking file"
+               "label":"Masking file",
+               "showArgument": true
            },
            "value": {
                "required":false,
@@ -178,7 +214,8 @@
             "details": {
               "description": "Enter an identifier for this condition - **Use _ instead of spaces** e.g. 2_hours",
               "argument":"-lab1 ",
-              "label":"Condition 1 label (for R plots, use underscore instead of spaces between words)"
+              "label":"Condition 1 label (for R plots, use underscore instead of spaces between words)",
+              "showArgument": true
             },
             "value":{
               "default":"condition_1",
@@ -192,7 +229,8 @@
             "details": {
               "description": "Enter an identifier for this condition - **Use _ instead of spaces** e.g. 2_hours",
               "argument":"-lab2 ",
-              "label":"Condition 2 label (for R plots, use underscore instead of spaces between words)"
+              "label":"Condition 2 label (for R plots, use underscore instead of spaces between words)",
+              "showArgument": true
             },
             "value":{
               "default":"condition_2",
@@ -206,7 +244,8 @@
             "details": {
               "description": "Enter an identifier for this condition - **Use _ instead of spaces** e.g. 2_hours",
               "argument":"-lab3 ",
-              "label":"Condition 3 label (for R plots, use underscore instead of spaces between words)"
+              "label":"Condition 3 label (for R plots, use underscore instead of spaces between words)",
+              "showArgument": true
             },
             "value":{
               "default":"condition_3",
@@ -220,7 +259,8 @@
             "details": {
               "description": "Enter an identifier for this condition - **Use _ instead of spaces** e.g. 2_hours",
               "argument":"-lab4 ",
-              "label":"Condition 4 label (for R plots, use underscore instead of spaces between words)"
+              "label":"Condition 4 label (for R plots, use underscore instead of spaces between words)",
+              "showArgument": true
             },
             "value":{
               "default":"condition_4",
@@ -234,7 +274,8 @@
             "details": {
               "description": "Enter the prefix you would like your index files to have (excluding the suffix)",
               "argument":"-indpre ",
-              "label":"Index file prefix (excluding suffix)"
+              "label":"Index file prefix (excluding suffix)",
+              "showArgument": true
             },
             "value":{
               "default":"index_name",
@@ -247,7 +288,6 @@
             "id" : "fastqscale",
             "details": {
               "description": "Select a scale for quality in FASTQ files",
-              "argument":"",
               "label":""
             },
             "value":{
@@ -264,7 +304,6 @@
                                "-g":"Solexa1.3 (PHRED64)"
                              } ],
               "default": " ",
-              "required":true,
               "type":"enumeration",
               "visible":"true"
             }
@@ -274,7 +313,8 @@
             "details": {
               "description": "Select the library type that was used to construct your RNA-seq",
               "argument":"-e ",
-              "label":""
+              "label":"",
+              "showArgument": true
             },
             "value":{
               "enumValues":[
@@ -293,7 +333,8 @@
             "details": {
               "description": "Select the speed/sensitivity of alignment/mapping",
               "argument":"-f ",
-              "label":""
+              "label":"",
+              "showArgument": true
             },
             "value":{
               "enumValues":[
@@ -313,7 +354,8 @@
             "details": {
               "description": "Select the \"Insert\" size, the distance between the sequenced forward and reverse reads",
               "argument":"-a ",
-              "label":"Mate-pair inner distance"
+              "label":"Mate-pair inner distance",
+              "showArgument": true
             },
             "value":{
               "default":50,
@@ -327,7 +369,8 @@
             "details": {
               "description": "The standard deviation for the distribution on inner distances between mate pairs",
               "argument":"-b ",
-              "label":"Mate-pair inner distance standard deviation"
+              "label":"Mate-pair inner distance standard deviation",
+              "showArgument": true
             },
             "value":{
               "required":false,
@@ -341,7 +384,8 @@
             "details": {
               "description": "TopHat will report junctions spanned by reads with at least this many bases on each side of the junction (-a)",
               "argument":"-i ",
-              "label":"Minimum anchor length"
+              "label":"Minimum anchor length",
+              "showArgument": true
             },
             "value":{
               "default":8,
@@ -355,13 +399,14 @@
             "details": {
               "description": "The minimum intron length. TopHat will ignore donor/acceptor pairs closer than this many bases apart (-i)",
               "argument":"-k ",
-              "label":"The minimum intron length"
+              "label":"The minimum intron length",
+              "showArgument": true
             },
             "value":{
               "default":70,
-              "required":true,
               "type":"number",
-              "visible":"true"
+              "visible":"true",
+              "required": true
             }
         },
         {
@@ -369,7 +414,8 @@
             "details": {
               "description": "The maximum intron length. When searching for junctions ab initio, TopHat will ignore donor/acceptor pairs farther than this many bases apart, except when such a pair is supported by a split segment alignment of a long read (-I)",
               "argument":"-l ",
-              "label":"The maximum intron length"
+              "label":"The maximum intron length",
+              "showArgument": true
             },
             "value":{
               "default":50000,
@@ -383,7 +429,8 @@
             "details": {
               "description": "Maximum number of alignments to be allowed",
               "argument":"-j ",
-              "label":"Maximum alignments"
+              "label":"Maximum alignments",
+              "showArgument": true
             },
             "value":{
               "default":20,
@@ -397,7 +444,8 @@
             "details": {
               "description": "Minimum length of read segments",
               "argument":"-m ",
-              "label":"Minimum length"
+              "label":"Minimum length",
+              "showArgument": true
             },
             "value":{
               "default":20,
@@ -411,7 +459,8 @@
             "details": {
               "description": "No discordant alignments",
               "argument":"-c ",
-              "label":"Discordant alignments?"
+              "label":"Discordant alignments?",
+              "showArgument": true
             },
             "value":{
               "required":false,
@@ -424,7 +473,8 @@
             "details": {
               "description": "No mixed alignments",
               "argument":"-d ",
-              "label":"Mixed alignments"
+              "label":"Mixed alignments",
+              "showArgument": true
             },
             "value":{
               "required":false,
@@ -437,7 +487,8 @@
             "details": {
               "description": "Cufflinks will use transcripts found in the annotation file (gtf) as a basis for the assembly of transcripts",
               "argument":"-n ",
-              "label":"Use reference annotation GTF"
+              "label":"Use reference annotation GTF",
+              "showArgument": true
             },
             "value":{
               "default":"true",
@@ -451,7 +502,8 @@
             "details": {
               "description": "Use rescue method for multi-reads",
               "argument":"-p ",
-              "label":"Use rescue method"
+              "label":"Use rescue method",
+              "showArgument": true
             },
             "value":{
               "required":false,
@@ -464,7 +516,8 @@
             "details": {
               "description": "Maximum iterations allowed for MLE calculation",
               "argument":"-Q ",
-              "label":"Maximum iterations"
+              "label":"Maximum iterations",
+              "showArgument": true
             },
             "value":{
               "required":false,
@@ -478,7 +531,8 @@
             "details": {
               "description": "Transcript prefix id",
               "argument":"-q ",
-              "label":"Prefix id"
+              "label":"Prefix id",
+              "showArgument": true
             },
             "value":{
               "default":"CUFF",
@@ -492,7 +546,8 @@
             "details": {
               "description": "Minimum isoform fraction",
               "argument":"-s ",
-              "label":"Isoform fraction"
+              "label":"Isoform fraction",
+              "showArgument": true
             },
             "value":{
               "default":0.1,
@@ -506,7 +561,8 @@
             "details": {
               "description": "Supress intra-intronic transcripts below this level",
               "argument":"-t ",
-              "label":"Intra-intronic transcript treshold"
+              "label":"Intra-intronic transcript treshold",
+              "showArgument": true
             },
             "value":{
               "default":0.15,
@@ -520,7 +576,8 @@
             "details": {
               "description": "Maximum intron length",
               "argument":"-u ",
-              "label":"Max intron length"
+              "label":"Max intron length",
+              "showArgument": true
             },
             "value":{
               "default":300000,
@@ -534,7 +591,8 @@
             "details": {
               "description": "Minimum intron length",
               "argument":"-z ",
-              "label":"Min intron length"
+              "label":"Min intron length",
+              "showArgument": true
             },
             "value":{
               "default":50,
@@ -548,7 +606,8 @@
             "details": {
               "description": "Alpha for junction binomial test filter",
               "argument":"-v ",
-              "label":"Junction filter alpha"
+              "label":"Junction filter alpha",
+              "showArgument": true
             },
             "value":{
               "default":0.001,
@@ -562,7 +621,8 @@
             "details": {
               "description": "Small anchor fraction",
               "argument":"-w ",
-              "label":"Small anchor fraction"
+              "label":"Small anchor fraction",
+              "showArgument": true
             },
             "value":{
               "default":0.09,
@@ -576,7 +636,8 @@
             "details": {
               "description": "Minimum number of fragments needed for new transfrags",
               "argument":"-x ",
-              "label":"Transfrag treshold"
+              "label":"Transfrag treshold",
+              "showArgument": true
             },
             "value":{
               "default":10,
@@ -590,7 +651,8 @@
             "details": {
               "description": "Number of terminal exon bp to tolerate in introns",
               "argument":"-y ",
-              "label":"Terminal exon bp limit"
+              "label":"Terminal exon bp limit",
+              "showArgument": true
             },
             "value":{
               "default":8,
@@ -604,7 +666,8 @@
             "details": {
               "description": "Minimum average coverage required to attempt 3' trimming",
               "argument":"-A ",
-              "label":"Trimming - minimum average coverage"
+              "label":"Trimming - minimum average coverage",
+              "showArgument": true
             },
             "value":{
               "default":10,
@@ -618,7 +681,8 @@
             "details": {
               "description": "Fraction of average coverage below which to trim 3' end",
               "argument":"-B ",
-              "label":"Trimming - average coverage fraction"
+              "label":"Trimming - average coverage fraction",
+              "showArgument": true
             },
             "value":{
               "default":0.1,
@@ -632,7 +696,8 @@
             "details": {
               "description": "Maximum gap size to fill between transfrags",
               "argument":"-C ",
-              "label":"Transfrag max gap size"
+              "label":"Transfrag max gap size",
+              "showArgument": true
             },
             "value":{
               "default":50,
@@ -646,7 +711,8 @@
             "details": {
               "description": "Cuffdiff - Fragment bias correction using reference sequence",
               "argument":"-D ",
-              "label":"Ref seq bias correction"
+              "label":"Ref seq bias correction",
+              "showArgument": true
             },
             "value":{
               "default":true,
@@ -660,7 +726,8 @@
             "details": {
               "description": "Cuffdiff - Use rescue method for multi-reads",
               "argument":"-F ",
-              "label":"Use rescue method"
+              "label":"Use rescue method",
+              "showArgument": true
             },
             "value":{
               "required":false,
@@ -673,7 +740,8 @@
             "details": {
               "description": "Minimum number of alignments in a locus for testing",
               "argument":"-G ",
-              "label":"Min. testing alignments"
+              "label":"Min. testing alignments",
+              "showArgument": true
             },
             "value":{
               "default":10,
@@ -687,7 +755,8 @@
             "details": {
               "description": "False discovery rate used in testing",
               "argument":"-H ",
-              "label":"Testing FDR"
+              "label":"Testing FDR",
+              "showArgument": true
             },
             "value":{
               "default":0.05,
@@ -700,7 +769,6 @@
             "id" : "normalhits",
             "details": {
               "description": "Select hits to use for normalization",
-              "argument":"",
               "label":"Select normalization hits"
             },
             "value":{

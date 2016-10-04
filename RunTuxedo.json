@@ -12,10 +12,10 @@
     "input5" : ["agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/2hours_R1.fastq","agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/2hours_R1.fastq" ],
     "input6" : ["agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/2hours_R2.fastq","agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/2hours_R2.fastq" ],
     "input7" : ["agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/6h_R1.fastq","agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/6h_R1.fastq" ],
-    "input8" : ["agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/6h_R2.fastq","agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/6h_R2.fastq" ],
+    "input8" : ["agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/6h_R2.fastq","agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/6h_R2.fastq" ]
   },
   "parameters": {
-    "indpre" : "zebra"
+    "indpre" : "zebra",
     "insertsize": 100,
     "stdev": 20,
     "discalign": "true",
@@ -25,6 +25,7 @@
     "minanchor": 10,
     "maxalign": 10,
     "minintron": 50,
+    "minintron_tophat": 70,
     "maxintron_tophat": 50000,
     "minreadlength": 20,
     "numthreads": 12,
@@ -46,7 +47,7 @@
     "lab2": "9_hours",
     "lab3": "16_hours",
     "lab4": "24_hours",
-    "transfraggap": true,
+    "transfraggap_diff": true,
     "userescuecd": true,
     "testalign": 10,
     "testfdr": 0.05,
