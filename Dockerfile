@@ -10,8 +10,8 @@ ADD https://raw.githubusercontent.com/cyverseuk/tuxedo/master/rna_seq_4_conditio
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ trusty multiverse" >> /etc/apt/sources.list && \
 	apt-get update -y && apt-get -yy install bowtie2 software-properties-common samtools tophat cufflinks r-base r-bioc-cummerbund && \
-	chmod +x /usr/local/bin/rna_seq_4_conditions_docker.py && \
-    	chmod +x /usr/local/bin/cummerbund_plot_scripts.r
+	chmod 777 /usr/local/bin/rna_seq_4_conditions_docker.py && \
+    	chmod 777 /usr/local/bin/cummerbund_plot_scripts.r
 
 WORKDIR /data/
 
