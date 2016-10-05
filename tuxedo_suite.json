@@ -1,15 +1,12 @@
 {
-    "is_public": false,
-    "type": "executable",
+    "name": "cyverseUK-tuxedosuite",
+    "label": "Tuxedo suite PE up to 4 conditions",
     "version": "0.8.1",
-    "description": "Tuxedo suite of tools to assess levels of differential expression between up to 4 separate conditions. The Tuxedo suite: Tophat2>Cufflinks>Cuffmerge>Cuffdiff>CummRbund. http://www.nature.com/nprot/journal/v7/n3/full/nprot.2012.016.html \nworkflow v1.0\n",
-    "longDescription": "Tuxedo suite of tools to assess levels of differential expression between up to 4 separate conditions. The Tuxedo suite: Tophat2>Cufflinks>Cuffmerge>Cuffdiff>CummRbund. http://www.nature.com/nprot/journal/v7/n3/full/nprot.2012.016.html \nworkflow v1.0\n",
+    "shortDescription": "Tuxedo suite of tools to assess levels of differential expression between up to 4 separate conditions. The Tuxedo suite: Tophat2>Cufflinks>Cuffmerge>Cuffdiff>CummRbund. http://www.nature.com/nprot/journal/v7/n3/full/nprot.2012.016.html \nworkflow v1.0\n",
+    "longDescription":"This workflow carries out differential expression analysis using the Tuxedo suite of tools. In this workflow: TopHat v2.0.9,  Cufflinks package (including Cuffmerge and Cuffdiff) v2.2.1 and CummeRbund 2.4.1-1.\nInput files required: \n1) Paired end sequencing RNA-seq reads for each condition/replicate\n2) A reference genome in Fasta format OR select reference genome hosted on iPlant from drop down menu\n3) A genome annotation file in GFF3 or GTF2 format (http://cole-trapnell-lab.github.io/cufflinks/file_formats/) OR select annotation hosted on iPlant from drop down menu\n4) OPTIONAL- GTF masking file (containing transcripts to be ignored)\nGeneral settings: \nThe tool settings in the app below can be changed but are set as the default values (as dictated by each program in the workflow). If you are using the Tuxedo suite of tools for the first time we recommend using the default values in the first instance. \nProgram manuals:\nTophat https://ccb.jhu.edu/software/tophat/manual.shtml\n Cufflinks-Cuffdiff http://cole-trapnell-lab.github.io/cufflinks/manual/\nCummeRbund http://compbio.mit.edu/cummeRbund/manual_2_0.html\n",
     "helpURI": "http://link.springer.com/protocol/10.1007%2F978-1-4939-3167-5_18",
     "datePublished": "",
     "author": "Erik van den Bergh and Alice Minotto",
-    "id": "cyverseUK-tuxedosuite",
-    "name": "cyverseUK-tuxedosuite",
-    "label": "Tuxedo suite PE up to 4 conditions",
     "deploymentSystem":"cyverseUK-Storage2",
     "deploymentPath":"/mnt/data/rosysnake/Tuxedo",
     "executionSystem":"cyverseUK-Batch2",
@@ -17,7 +14,8 @@
     "parallelism": "SERIAL",
     "templatePath":"wrapper.sh",
     "testPath":"test.sh",
-    "longDescription":"This workflow carries out differential expression analysis using the Tuxedo suite of tools. In this workflow: TopHat v2.0.9,  Cufflinks package (including Cuffmerge and Cuffdiff) v2.2.1 and CummeRbund 2.4.1-1.\nInput files required: \n1) Paired end sequencing RNA-seq reads for each condition/replicate\n2) A reference genome in Fasta format OR select reference genome hosted on iPlant from drop down menu\n3) A genome annotation file in GFF3 or GTF2 format (http://cole-trapnell-lab.github.io/cufflinks/file_formats/) OR select annotation hosted on iPlant from drop down menu\n4) OPTIONAL- GTF masking file (containing transcripts to be ignored)\nGeneral settings: \nThe tool settings in the app below can be changed but are set as the default values (as dictated by each program in the workflow). If you are using the Tuxedo suite of tools for the first time we recommend using the default values in the first instance. \nProgram manuals:\nTophat https://ccb.jhu.edu/software/tophat/manual.shtml\n Cufflinks-Cuffdiff http://cole-trapnell-lab.github.io/cufflinks/manual/\nCummeRbund http://compbio.mit.edu/cummeRbund/manual_2_0.html\n",
+    "tags": [],
+    "ontology": [],
     "inputs": [
        {
            "id" : "input1",
@@ -96,9 +94,8 @@
                "showArgument": true
            },
            "value": {
-               "required":true,
-               "visible":true,
-               "default": ""
+               "required":false,
+               "visible":true
            },
            "semantics": {
              "maxCardinality": -1
@@ -113,9 +110,8 @@
                "showArgument": true
            },
            "value": {
-               "required":true,
-               "visible":true,
-               "default": ""
+               "required":false,
+               "visible":true
            },
            "semantics": {
              "maxCardinality": -1
@@ -130,9 +126,8 @@
                "showArgument": true
            },
            "value": {
-               "required":true,
-               "visible":true,
-               "default": ""
+               "required":false,
+               "visible":true
            },
            "semantics": {
              "maxCardinality": -1
@@ -147,9 +142,8 @@
                "showArgument": true
            },
            "value": {
-               "required":true,
-               "visible":true,
-               "default": ""
+               "required":false,
+               "visible":true
            },
            "semantics": {
              "maxCardinality": -1
@@ -249,7 +243,7 @@
             },
             "value":{
               "default":"condition_3",
-              "required":true,
+              "required":false,
               "type":"string",
               "visible":"true"
             }
@@ -264,7 +258,7 @@
             },
             "value":{
               "default":"condition_4",
-              "required":true,
+              "required":false,
               "type":"string",
               "visible":"true"
             }
@@ -358,7 +352,7 @@
               "showArgument": true
             },
             "value":{
-              "default":50,
+              "default": 50,
               "required":true,
               "type":"number",
               "visible":"true"
@@ -403,7 +397,7 @@
               "showArgument": true
             },
             "value":{
-              "default":70,
+              "default": 70,
               "type":"number",
               "visible":"true",
               "required": true
