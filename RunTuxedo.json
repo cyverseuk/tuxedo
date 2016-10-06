@@ -1,6 +1,6 @@
 {
   "name" : "Tuxedo_4c",
-  "appId" : "cyverseUK-tuxedosuite-0.8.1",
+  "appId" : "cyverseUK-tuxedosuite-2.1.0",
   "archive" : "true",
   "inputs": {
     "refgen" : "agave://cyverseUK-Storage2/erikvdbergh/tuxedo_data/Danio_rerio_reference.dna.fa",
