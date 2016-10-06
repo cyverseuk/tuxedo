@@ -15,7 +15,12 @@
     "templatePath":"wrapper.sh",
     "testPath":"test.sh",
     "tags": [],
-    "ontology": [],
+    "ontology": [ "http://edamontology.org/operation_3198",
+    "http://edamontology.org/operation_0315",
+    "http://edamontology.org/operation_3680",
+    "http://edamontology.org/operation_3258",
+    "http://edamontology.org/topic_0099",
+    "http://edamontology.org/topic_3308" ],
     "inputs": [
        {
            "id" : "input1",
