@@ -163,8 +163,9 @@
                "showArgument": true
            },
            "value": {
-               "required":false,
-               "visible":true
+               "required":true,
+               "visible":true,
+               "default": ""
            }
        },
        {
