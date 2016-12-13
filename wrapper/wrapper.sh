@@ -2,12 +2,12 @@
 
 if [ -n "${input5}" ] && [ -z "${lab3}" ]
   then
-    echo condition 3 label is required
+    >&2 echo condition 3 label is required
     exit 1
 fi
 if [ -n "${input7}" ] && [ -z "${lab4}" ]
   then
-    echo condition 4 label is required
+    >&2 echo condition 4 label is required
     exit 1
 fi
 
