@@ -8,7 +8,7 @@
     "datePublished": "",
     "author": "Erik van den Bergh and Alice Minotto",
     "deploymentSystem":"cyverseUK-Storage2",
-    "deploymentPath":"/mnt/data/rosysnake/Tuxedo",
+    "deploymentPath":"/mnt/data/apps/Tuxedo",
     "executionSystem":"cyverseUK-Batch2",
     "executionType":"CLI",
     "parallelism": "SERIAL",
