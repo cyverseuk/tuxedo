@@ -1,13 +1,30 @@
 #!/bin/bash
 
+function debug {
+  echo "creating debugging directory"
+mkdir .debug
+for word in ${rmthis}
+  do
+    if [[ "${word}" == *.sh ]] || [[ "${word}" == lib ]]
+      then
+        mv "${word}" .debug;
+      fi
+  done
+}
+
+rmthis=`ls`
+echo ${rmthis}
+
 if [ -n "${input5}" ] && [ -z "${lab3}" ]
   then
     >&2 echo condition 3 label is required
+    debug
     exit 1
 fi
 if [ -n "${input7}" ] && [ -z "${lab4}" ]
   then
     >&2 echo condition 4 label is required
+    debug
     exit 1
 fi
 
@@ -53,5 +70,7 @@ for el in "${FILELIST}"
     #echo "${el}"
     echo "${el}" >> .agave.archive
   done
+
+debug
 
 exit 0
